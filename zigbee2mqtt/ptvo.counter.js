@@ -34,7 +34,7 @@ const fzLocal = {
                 if (deltaTimeSec > 0 && deltaCount > 0) {
                     power = 1000 * (deltaCount / 6400) * (3600 / deltaTimeSec);
                 }
-                const energy = val / 64000;
+                const energy = val / 6400;
 
                 payload['l2_delta'] = precisionRound(deltaCount, 0);
                 payload['power'] = precisionRound(power, 0);
