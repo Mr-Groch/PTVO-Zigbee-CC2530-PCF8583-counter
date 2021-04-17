@@ -1,6 +1,15 @@
 # PTVO-Zigbee-CC2530-PCF8583-counter
 Battery impulse counter based on PTVO Zigbee firmware with CC2530 and PCF8583 acting as hardware counter
 
+Example converter for energy meter with 6400 impulses per kWh. You can change that in lines:
+
+```js
+                    power = 1000 * (deltaCount / 6400) * (3600 / deltaTimeSec);
+```
+```js
+                const energy = val / 6400;
+```
+
 ![511hPwS1m2L _AC_SX569_](https://user-images.githubusercontent.com/20594810/115124794-7927f400-9fc4-11eb-982e-40af291f1ec3.jpg)
 
 ![cc2530_counter](https://user-images.githubusercontent.com/20594810/115124806-80e79880-9fc4-11eb-85b2-ef5c5289c8bb.png)
