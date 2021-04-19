@@ -30,7 +30,7 @@ const fzLocal = {
 
                 const deltaTimeSec = Math.floor((Date.now() - last.since) / 1000);
                 const deltaCount = val - last.counter;
-				let power = 0;
+                let power = 0;
                 if (deltaTimeSec > 0 && deltaCount > 0) {
                     power = 1000 * (deltaCount / 6400) * (3600 / deltaTimeSec);
                 }
@@ -71,15 +71,14 @@ const device = {
     fromZigbee: [fz.ignore_basic_report, fz.ptvo_switch_analog_input, fzLocal.counter],
     toZigbee: [tz.ptvo_switch_trigger, tz.ptvo_switch_analog_input,],
     exposes: [exposes.numeric('l2', ea.STATE_SET).withDescription('Counter value. Write zero to reset the counter or any other initial counter value'),
-      e.battery_voltage(),
-      e.battery(),
-      e.power(),
-      e.energy(),
-      e.linkquality(),
+        e.battery_voltage(),
+        e.battery(),
+        e.power(),
+        e.energy(),
+        e.linkquality(),
     ],
     meta: {
         multiEndpoint: true,
-        
     },
     endpoint: (device) => {
         return {
