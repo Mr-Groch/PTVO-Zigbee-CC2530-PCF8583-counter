@@ -1,6 +1,15 @@
 # PTVO-Zigbee-CC2530-PCF8583-counter
 Battery impulse counter based on PTVO Zigbee firmware with CC2530 and PCF8583 acting as hardware counter
 
+Components:
+- [CC2530 Module](https://aliexpress.com/item/1005001992423340.html) (or [E18-TBL-01 Module](https://aliexpress.com/item/1005001473354195.html))
+- [Photoresistor Module](https://aliexpress.com/item/32767875194.html)
+- [PCF8583 Real Time Clock](https://aliexpress.com/item/32601793278.html)
+- 1KΩ Resistor
+- 100nf Capacitor
+- 3V Battery (like CR2450, CR2032, etc or 2xAA/AAA)
+- Prototype board and some wires
+
 Example converter for energy meter with 6400 impulses per kWh. You can change that in lines:
 
 ```js
