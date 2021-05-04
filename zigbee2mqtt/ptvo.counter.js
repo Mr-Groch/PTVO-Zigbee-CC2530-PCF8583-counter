@@ -22,7 +22,7 @@ const fzLocal = {
             const payload = {};
             const channel = msg.endpoint.ID;
             if (channel == 2) {
-                const val = precisionRound(msg.data['presentValue'], 0) // it may be needed to divide counter value by 2 (depends on pulse output);
+                const val = precisionRound(msg.data['presentValue'], 0) // it may be needed to divide counter value by 2 (depends on pulse input);
                 if (!globalStore.hasValue(msg.endpoint, 'counter')) {
                     globalStore.putValue(msg.endpoint, 'counter', {counter: val, since: Date.now()});
                 }
