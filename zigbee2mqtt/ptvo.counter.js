@@ -70,7 +70,7 @@ const device = {
     description: '[Configurable firmware](https://ptvo.info/zigbee-configurable-firmware-features/)',
     fromZigbee: [fz.ignore_basic_report, fz.ptvo_switch_analog_input, fzLocal.counter],
     toZigbee: [tz.ptvo_switch_trigger, tz.ptvo_switch_analog_input,],
-    exposes: [exposes.numeric('l2', ea.STATE_SET).withDescription('Counter value. Write zero to reset the counter or any other initial counter value'),
+    exposes: [exposes.numeric('l2', ea.STATE_SET).withValueMin(0).withValueMax(Number.MAX_SAFE_INTEGER).withValueStep(1).withDescription('Counter value. Write zero to reset the counter or any other initial counter value'),
         e.battery_voltage(),
         e.battery(),
         e.power(),
